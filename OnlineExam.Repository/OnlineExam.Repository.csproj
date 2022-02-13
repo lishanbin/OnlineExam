@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlSugar.IOC" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineExam.IRepository\OnlineExam.IRepository.csproj" />
+    <ProjectReference Include="..\OnlineExam.Model\OnlineExam.Model.csproj" />
+  </ItemGroup>
+
+</Project>

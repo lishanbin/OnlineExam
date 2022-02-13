@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "086e0212-8777-4628-9758-46ad06deb27f": {
+      "ProjectGuid": "086e0212-8777-4628-9758-46ad06deb27f",
+      "DisplayName": "OnlineExam.Model",
+      "ColorIndex": 0
+    },
+    "b53e6d5a-8f25-42ce-a437-0a058d843a12": {
+      "ProjectGuid": "b53e6d5a-8f25-42ce-a437-0a058d843a12",
+      "DisplayName": "OnlineExam.IRepository",
+      "ColorIndex": 1
+    },
+    "a241e532-c66b-44ed-8a60-94b1390b1ba8": {
+      "ProjectGuid": "a241e532-c66b-44ed-8a60-94b1390b1ba8",
+      "DisplayName": "OnlineExam.Repository",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    },
+    "a68d7d54-9cd7-4a2f-9dfe-78bf79502e24": {
+      "ProjectGuid": "a68d7d54-9cd7-4a2f-9dfe-78bf79502e24",
+      "DisplayName": "OnlineExam.WebApi",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

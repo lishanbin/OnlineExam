@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineExam.IRepository\OnlineExam.IRepository.csproj" />
+    <ProjectReference Include="..\OnlineExam.Model\OnlineExam.Model.csproj" />
+    <ProjectReference Include="..\OnlineExam.Repository\OnlineExam.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
