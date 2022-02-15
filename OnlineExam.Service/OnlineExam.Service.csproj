@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineExam.IRepository\OnlineExam.IRepository.csproj" />
+    <ProjectReference Include="..\OnlineExam.IService\OnlineExam.IService.csproj" />
+    <ProjectReference Include="..\OnlineExam.Model\OnlineExam.Model.csproj" />
+  </ItemGroup>
+
+</Project>

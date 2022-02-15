@@ -1,0 +1,248 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\OnlineExam.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj",
+        "projectName": "OnlineExam.IRepository",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj",
+        "projectName": "OnlineExam.IService",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj",
+        "projectName": "OnlineExam.Model",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.0.5.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\OnlineExam.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\OnlineExam.Service.csproj",
+        "projectName": "OnlineExam.Service",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\OnlineExam.Service.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj"
+              },
+              "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj"
+              },
+              "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

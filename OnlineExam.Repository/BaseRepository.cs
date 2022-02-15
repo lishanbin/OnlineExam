@@ -41,23 +41,23 @@ namespace OnlineExam.Repository
             return await base.GetSingleAsync(func);
         }
 
-        public async Task<List<TEntity>> QueryAsync()
+        public virtual async Task<List<TEntity>> QueryAsync()
         {
             return await base.GetListAsync();
         }
 
-        public async Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func)
+        public virtual async Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func)
         {
             return await base.GetListAsync(func);
         }
 
-        public async Task<List<TEntity>> QueryAsync(int page, int size, RefAsync<int> total)
+        public virtual async Task<List<TEntity>> QueryAsync(int page, int size, RefAsync<int> total)
         {
             return await base.Context.Queryable<TEntity>()
                 .ToPageListAsync(page, size, total);
         }
 
-        public async Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func, int page, int size, RefAsync<int> total)
+        public virtual async Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func, int page, int size, RefAsync<int> total)
         {
             return await base.Context.Queryable<TEntity>()
                 .Where(func)
