@@ -6,6 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using OnlineExam.IRepository;
+using OnlineExam.IService;
+using OnlineExam.Repository;
+using OnlineExam.Service;
 using SqlSugar.IOC;
 using System;
 using System.Collections.Generic;
@@ -42,6 +46,9 @@ namespace OnlineExam.WebApi
                 IsAutoCloseConnection = true
             });
             #endregion
+            #region IOC“¿¿µ◊¢»Î
+            services.AddCustomIOC();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +69,20 @@ namespace OnlineExam.WebApi
             {
                 endpoints.MapControllers();
             });
+        }
+    }
+
+    public static class IOCExend
+    {
+        public static IServiceCollection AddCustomIOC(this IServiceCollection services)
+        {
+            services.AddScoped<IStudentRepository,StudentRepository>();
+            services.AddScoped<IStudentService,StudentService>();
+            services.AddScoped<ISubjectRepository,SubjectRepository>();
+            services.AddScoped<ISubjectService,SubjectService>();
+            services.AddScoped<IConfigRepository,ConfigRepository>();
+            services.AddScoped<IConfigService,ConfigService>();
+            return services;
         }
     }
 }

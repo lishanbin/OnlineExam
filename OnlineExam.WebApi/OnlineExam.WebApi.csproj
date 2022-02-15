@@ -10,8 +10,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OnlineExam.IRepository\OnlineExam.IRepository.csproj" />
+    <ProjectReference Include="..\OnlineExam.IService\OnlineExam.IService.csproj" />
     <ProjectReference Include="..\OnlineExam.Model\OnlineExam.Model.csproj" />
     <ProjectReference Include="..\OnlineExam.Repository\OnlineExam.Repository.csproj" />
+    <ProjectReference Include="..\OnlineExam.Service\OnlineExam.Service.csproj" />
   </ItemGroup>
 
 </Project>

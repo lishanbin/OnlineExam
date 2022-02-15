@@ -2361,6 +2361,19 @@
           "bin/placeholder/OnlineExam.IRepository.dll": {}
         }
       },
+      "OnlineExam.IService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OnlineExam.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OnlineExam.IService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineExam.IService.dll": {}
+        }
+      },
       "OnlineExam.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2387,6 +2400,21 @@
         },
         "runtime": {
           "bin/placeholder/OnlineExam.Repository.dll": {}
+        }
+      },
+      "OnlineExam.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OnlineExam.IRepository": "1.0.0",
+          "OnlineExam.IService": "1.0.0",
+          "OnlineExam.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OnlineExam.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineExam.Service.dll": {}
         }
       }
     }
@@ -7850,6 +7878,11 @@
       "path": "../OnlineExam.IRepository/OnlineExam.IRepository.csproj",
       "msbuildProject": "../OnlineExam.IRepository/OnlineExam.IRepository.csproj"
     },
+    "OnlineExam.IService/1.0.0": {
+      "type": "project",
+      "path": "../OnlineExam.IService/OnlineExam.IService.csproj",
+      "msbuildProject": "../OnlineExam.IService/OnlineExam.IService.csproj"
+    },
     "OnlineExam.Model/1.0.0": {
       "type": "project",
       "path": "../OnlineExam.Model/OnlineExam.Model.csproj",
@@ -7859,13 +7892,20 @@
       "type": "project",
       "path": "../OnlineExam.Repository/OnlineExam.Repository.csproj",
       "msbuildProject": "../OnlineExam.Repository/OnlineExam.Repository.csproj"
+    },
+    "OnlineExam.Service/1.0.0": {
+      "type": "project",
+      "path": "../OnlineExam.Service/OnlineExam.Service.csproj",
+      "msbuildProject": "../OnlineExam.Service/OnlineExam.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "OnlineExam.IRepository >= 1.0.0",
+      "OnlineExam.IService >= 1.0.0",
       "OnlineExam.Model >= 1.0.0",
       "OnlineExam.Repository >= 1.0.0",
+      "OnlineExam.Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -7899,11 +7939,17 @@
             "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {
               "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj"
             },
+            "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj": {
+              "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj"
+            },
             "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
               "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
             },
             "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Repository\\OnlineExam.Repository.csproj": {
               "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Repository\\OnlineExam.Repository.csproj"
+            },
+            "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\OnlineExam.Service.csproj": {
+              "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Service\\OnlineExam.Service.csproj"
             }
           }
         }

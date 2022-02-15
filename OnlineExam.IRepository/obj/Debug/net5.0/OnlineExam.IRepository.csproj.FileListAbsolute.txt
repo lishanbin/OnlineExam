@@ -1,0 +1,15 @@
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\bin\Debug\net5.0\OnlineExam.IRepository.deps.json
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\bin\Debug\net5.0\OnlineExam.IRepository.dll
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\bin\Debug\net5.0\ref\OnlineExam.IRepository.dll
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\bin\Debug\net5.0\OnlineExam.IRepository.pdb
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\bin\Debug\net5.0\OnlineExam.Model.dll
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\bin\Debug\net5.0\OnlineExam.Model.pdb
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.AssemblyInfo.cs
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.csproj.CopyComplete
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.dll
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\ref\OnlineExam.IRepository.dll
+C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.IRepository\obj\Debug\net5.0\OnlineExam.IRepository.pdb
