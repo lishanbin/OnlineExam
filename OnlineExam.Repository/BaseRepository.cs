@@ -16,49 +16,52 @@ namespace OnlineExam.Repository
         {
             base.Context = DbScoped.Sugar;
         }
-        public Task<bool> CreateAsync(TEntity entity)
+        public async Task<bool> CreateAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            return await base.InsertAsync(entity);
         }
 
-        public Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            return await base.DeleteByIdAsync(id);
         }
 
-        public Task<bool> EditAsync(TEntity entity)
+        public async Task<bool> EditAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            return await base.UpdateAsync(entity);
         }
 
-        public Task<TEntity> FindAsync(int id)
+        public async Task<TEntity> FindAsync(int id)
         {
-            throw new NotImplementedException();
+            return await base.GetByIdAsync(id);
         }
 
-        public Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> func)
+        public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> func)
         {
-            throw new NotImplementedException();
+            return await base.GetSingleAsync(func);
         }
 
-        public Task<List<TEntity>> QueryAsync()
+        public async Task<List<TEntity>> QueryAsync()
         {
-            throw new NotImplementedException();
+            return await base.GetListAsync();
         }
 
-        public Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func)
+        public async Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func)
         {
-            throw new NotImplementedException();
+            return await base.GetListAsync(func);
         }
 
-        public Task<List<TEntity>> QueryAsync(int page, int size, RefAsync<int> total)
+        public async Task<List<TEntity>> QueryAsync(int page, int size, RefAsync<int> total)
         {
-            throw new NotImplementedException();
+            return await base.Context.Queryable<TEntity>()
+                .ToPageListAsync(page, size, total);
         }
 
-        public Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func, int page, int size, RefAsync<int> total)
+        public async Task<List<TEntity>> QueryAsync(Expression<Func<TEntity, bool>> func, int page, int size, RefAsync<int> total)
         {
-            throw new NotImplementedException();
+            return await base.Context.Queryable<TEntity>()
+                .Where(func)
+                .ToPageListAsync(page, size, total);
         }
     }
 }
