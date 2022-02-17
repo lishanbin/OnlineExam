@@ -10,3 +10,15 @@ C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam
 C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.dll
 C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\ref\OnlineExam.Model.dll
 C:\Users\PC\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.pdb
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\bin\Debug\net5.0\OnlineExam.Model.deps.json
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\bin\Debug\net5.0\OnlineExam.Model.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\bin\Debug\net5.0\ref\OnlineExam.Model.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\bin\Debug\net5.0\OnlineExam.Model.pdb
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.csproj.AssemblyReference.cache
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.AssemblyInfoInputs.cache
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.AssemblyInfo.cs
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.csproj.CoreCompileInputs.cache
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\ref\OnlineExam.Model.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.Model\obj\Debug\net5.0\OnlineExam.Model.pdb

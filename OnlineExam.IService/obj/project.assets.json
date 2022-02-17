@@ -7548,19 +7548,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\lishanbin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj",
+      "projectUniqueName": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj",
       "projectName": "OnlineExam.IService",
-      "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\obj\\",
+      "projectPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\OnlineExam.IService.csproj",
+      "packagesPath": "C:\\Users\\lishanbin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lishanbin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7574,8 +7579,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
+            "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+              "projectPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
             }
           }
         }
@@ -7604,7 +7609,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

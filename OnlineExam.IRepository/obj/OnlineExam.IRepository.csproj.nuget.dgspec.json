@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {}
+    "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {
+    "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj",
+        "projectUniqueName": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj",
         "projectName": "OnlineExam.IRepository",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\obj\\",
+        "projectPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\OnlineExam.IRepository.csproj",
+        "packagesPath": "C:\\Users\\lishanbin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.IRepository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lishanbin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
+              "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+                "projectPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj"
               }
             }
           }
@@ -58,21 +62,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
+    "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj",
+        "projectUniqueName": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj",
         "projectName": "OnlineExam.Model",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\obj\\",
+        "projectPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\OnlineExam.Model.csproj",
+        "packagesPath": "C:\\Users\\lishanbin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Model\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lishanbin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
