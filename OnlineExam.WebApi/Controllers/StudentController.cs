@@ -30,6 +30,7 @@ namespace OnlineExam.WebApi.Controllers
 
             return ApiResultHelper.Success(stuList);
         }
+
         /// <summary>
         /// 添加学生
         /// </summary>
@@ -55,6 +56,45 @@ namespace OnlineExam.WebApi.Controllers
             if (newId<=0) return ApiResultHelper.Error("添加失败");
             var newStu=await _iStudentService.FindAsync(newId);
             return ApiResultHelper.Success(newStu);
+        }
+
+        /// <summary>
+        /// 删除学生
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("Delete")]
+        public async Task<ApiResult> Delete(int id)
+        {
+            bool b = await _iStudentService.DeleteAsync(id);
+            if (!b) return ApiResultHelper.Error("删除失败");
+            return ApiResultHelper.Success(b);
+        }
+
+        /// <summary>
+        /// 编辑学生信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="name"></param>
+        /// <param name="num"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        [HttpPut("Edit")]
+        public async Task<ApiResult> Edit(int id,string username, string password, string name, int num, int state)
+        {
+            var student = await _iStudentService.FindAsync(id);
+            if (student == null) return ApiResultHelper.Error("没有找到该学生");
+            student.Username = username;
+            student.Password = password;
+            student.Name = name;
+            student.State = state;
+            student.Num = num;
+            student.Adddate = System.DateTime.Now;
+            bool b=await _iStudentService.EditAsync(student);
+            if (!b) return ApiResultHelper.Error("修改失败");
+            return ApiResultHelper.Success(student);
         }
 
     }
