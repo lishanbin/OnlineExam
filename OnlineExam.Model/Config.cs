@@ -7,7 +7,7 @@ using SqlSugar;
 
 namespace OnlineExam.Model
 {
-    public class Config
+    public class Config:BaseId
     {
         [SugarColumn(ColumnDataType ="varchar(200)")]
         public string Title { get; set; }//考试名称

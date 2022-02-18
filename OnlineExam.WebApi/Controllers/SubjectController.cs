@@ -51,7 +51,7 @@ namespace OnlineExam.WebApi.Controllers
             Subject subject = new Subject
             {
                 Question = question,
-                More = more,
+                More = string.IsNullOrWhiteSpace(more)?"":more,
                 List = list,
                 Answer = answer,
                 Grade = grade,

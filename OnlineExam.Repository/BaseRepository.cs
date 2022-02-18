@@ -17,13 +17,13 @@ namespace OnlineExam.Repository
         {
             base.Context = DbScoped.Sugar;
             //创建数据库
-            //base.Context.DbMaintenance.CreateDatabase();
+            base.Context.DbMaintenance.CreateDatabase();
             //创建表
-            //base.Context.CodeFirst.InitTables(
-            //    typeof(Student),
-            //    typeof(Subject),
-            //    typeof(Config)
-            //    );
+            base.Context.CodeFirst.InitTables(
+                typeof(Student),
+                typeof(Subject),
+                typeof(Config)
+                );
         }
         public async Task<int> CreateAsync(TEntity entity)
         {
