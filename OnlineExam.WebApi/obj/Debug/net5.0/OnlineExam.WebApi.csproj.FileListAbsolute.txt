@@ -196,3 +196,10 @@ C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\obj\Debug\net5.0\On
 C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\obj\Debug\net5.0\ref\OnlineExam.WebApi.dll
 C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\obj\Debug\net5.0\OnlineExam.WebApi.pdb
 C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\obj\Debug\net5.0\OnlineExam.WebApi.genruntimeconfig.cache
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

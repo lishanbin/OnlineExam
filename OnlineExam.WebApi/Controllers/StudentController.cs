@@ -1,14 +1,20 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineExam.IService;
 using OnlineExam.Model;
+using OnlineExam.Model.DTO;
+using OnlineExam.WebApi.Utility._MD5;
 using OnlineExam.WebApi.Utility.ApiResult;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace OnlineExam.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StudentController : ControllerBase
     {
         private readonly IStudentService _iStudentService;
@@ -23,12 +29,22 @@ namespace OnlineExam.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("Students")]
-        public async Task<ApiResult> GetStudents()
+        public async Task<ApiResult> GetStudents([FromServices]IMapper iMapper)
         {
            var stuList=await  _iStudentService.QueryAsync();
             if (stuList.Count == 0) return ApiResultHelper.Error("没有更多的学生");
 
-            return ApiResultHelper.Success(stuList);
+            try
+            {
+                var students=iMapper.Map<List<StudentDTO>>(stuList);
+                return ApiResultHelper.Success(students);
+            }
+            catch (System.Exception)
+            {
+
+                return ApiResultHelper.Error("AutoMapper映射错误");
+            }
+            
         }
 
         /// <summary>
@@ -47,7 +63,7 @@ namespace OnlineExam.WebApi.Controllers
             Student student = new Student
             {
                 Username = username,
-                Password = password,
+                Password = MD5Helper.MD5Encrypt32(password),
                 Name = name,
                 State = state,
                 Num = num
@@ -87,7 +103,7 @@ namespace OnlineExam.WebApi.Controllers
             var student = await _iStudentService.FindAsync(id);
             if (student == null) return ApiResultHelper.Error("没有找到该学生");
             student.Username = username;
-            student.Password = password;
+            student.Password = MD5Helper.MD5Encrypt32(password);
             student.Name = name;
             student.State = state;
             student.Num = num;
