@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using OnlineExam.IRepository;
 using OnlineExam.IService;
+using OnlineExam.JWT.Utility._Captcha;
 using OnlineExam.Repository;
 using OnlineExam.Service;
 using SqlSugar.IOC;
@@ -47,6 +48,19 @@ namespace OnlineExam.JWT
             #endregion
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<IStudentService, StudentService>();
+
+            #region 验证码注入
+            services.AddScoped<ICaptcha, Captcha>();
+            #endregion
+
+            #region Reis注入
+            //连接字符串
+            string _connectionString = Configuration.GetConnectionString("Redis");
+            services.AddDistributedRedisCache(options =>
+            {
+                options.Configuration = _connectionString;
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

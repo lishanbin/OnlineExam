@@ -89,6 +89,18 @@ namespace OnlineExam.WebApi
             #region JWT鉴权
             services.AddCustomJWT();
             #endregion
+
+            #region 配置跨域
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsSetup", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -100,6 +112,9 @@ namespace OnlineExam.WebApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnlineExam.WebApi v1"));
             }
+
+            //Cors跨域中间件
+            app.UseCors("CorsSetup");
 
             app.UseRouting();
 
@@ -126,6 +141,9 @@ namespace OnlineExam.WebApi
             services.AddScoped<ISubjectService,SubjectService>();
             services.AddScoped<IConfigRepository,ConfigRepository>();
             services.AddScoped<IConfigService,ConfigService>();
+
+            services.AddScoped<IMenuRepository,MenuRepository>();
+            services.AddScoped<IMenuService,MenuService > ();
             return services;
         }
         //鉴权
@@ -139,7 +157,7 @@ namespace OnlineExam.WebApi
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("lishanbin-onlineexam")),
                         ValidateIssuer = true,
-                        ValidIssuer = "http://localhost:6060",
+                        ValidIssuer = "http://172.16.36.13:6060",
                         ValidateAudience = true,
                         ValidAudience = "http://localhost:5000",
                         ValidateLifetime = true,

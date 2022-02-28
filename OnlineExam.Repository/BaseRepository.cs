@@ -22,7 +22,8 @@ namespace OnlineExam.Repository
             base.Context.CodeFirst.InitTables(
                 typeof(Student),
                 typeof(Subject),
-                typeof(Config)
+                typeof(Config),
+                typeof(Menu)
                 );
         }
         public async Task<int> CreateAsync(TEntity entity)

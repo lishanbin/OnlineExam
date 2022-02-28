@@ -9,7 +9,7 @@ namespace OnlineExam.WebApi.Utility.ApiResult
             {
                 Code = 200,
                 Data = data,
-                Msg = "操作成功",
+                Msg = "",
                 Total = 0
             };
         }
@@ -20,7 +20,7 @@ namespace OnlineExam.WebApi.Utility.ApiResult
             {
                 Code = 200,
                 Data = data,
-                Msg = "操作成功",
+                Msg = "",
                 Total = total
             };
         }

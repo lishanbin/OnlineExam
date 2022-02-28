@@ -48,6 +48,21 @@ namespace OnlineExam.WebApi.Controllers
         }
 
         /// <summary>
+        /// 获取学生信息
+        /// </summary>
+        /// <param name="iMapper"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("Student")]
+        public async Task<ApiResult> Student([FromServices]IMapper iMapper,int id)
+        {
+            var student=await _iStudentService.FindAsync(id);
+            if (student == null) return ApiResultHelper.Error("学生信息不存在");
+            var studentDTO=iMapper.Map<StudentDTO>(student);
+            return ApiResultHelper.Success(studentDTO);
+        }
+
+        /// <summary>
         /// 添加学生
         /// </summary>
         /// <param name="username"></param>

@@ -25,7 +25,22 @@
       "ProjectGuid": "a68d7d54-9cd7-4a2f-9dfe-78bf79502e24",
       "DisplayName": "OnlineExam.WebApi",
       "ColorIndex": 3
+    },
+    "91b70cf7-f0d4-4a86-96fd-d22501819be6": {
+      "ProjectGuid": "91b70cf7-f0d4-4a86-96fd-d22501819be6",
+      "DisplayName": "OnlineExam.Service",
+      "ColorIndex": 4
+    },
+    "e7c5d4b3-ddc8-4e36-9104-f74ca49e8ec6": {
+      "ProjectGuid": "e7c5d4b3-ddc8-4e36-9104-f74ca49e8ec6",
+      "DisplayName": "OnlineExam.IService",
+      "ColorIndex": 5
+    },
+    "55318abd-88fd-49ca-8416-6105c331a585": {
+      "ProjectGuid": "55318abd-88fd-49ca-8416-6105c331a585",
+      "DisplayName": "OnlineExam.JWT",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 7
 }

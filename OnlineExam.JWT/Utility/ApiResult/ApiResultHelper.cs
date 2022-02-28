@@ -20,7 +20,7 @@ namespace OnlineExam.JWT.Utility.ApiResult
             {
                 Code = 200,
                 Data = data,
-                Msg = "操作成功",
+                Msg = "",
                 Total = total
             };
         }
