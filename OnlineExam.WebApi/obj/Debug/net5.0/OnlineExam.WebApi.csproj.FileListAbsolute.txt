@@ -203,3 +203,9 @@ C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Mi
 C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\NOTICE.TXT
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\NPOI.OOXML.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\NPOI.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
+C:\Users\lishanbin\Desktop\Exam\OnlineExam\OnlineExam.WebApi\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll

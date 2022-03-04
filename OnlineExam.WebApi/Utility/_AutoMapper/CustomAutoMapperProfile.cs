@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using OnlineExam.Model;
 using OnlineExam.Model.DTO;
+using OnlineExam.WebApi.ViewModel;
 
 namespace OnlineExam.WebApi.Utility._AutoMapper
 {
@@ -9,6 +10,7 @@ namespace OnlineExam.WebApi.Utility._AutoMapper
         public CustomAutoMapperProfile()
         {
             base.CreateMap<Student, StudentDTO>();
+            base.CreateMap<Student, StudentViewModel>();
         }
     }
 }

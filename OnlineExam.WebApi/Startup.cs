@@ -161,7 +161,7 @@ namespace OnlineExam.WebApi
                         ValidateAudience = true,
                         ValidAudience = "http://localhost:5000",
                         ValidateLifetime = true,
-                        ClockSkew = TimeSpan.FromMinutes(60)
+                        ClockSkew = TimeSpan.FromMinutes(90)
                     };
                 });
             return services;

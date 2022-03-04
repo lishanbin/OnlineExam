@@ -66,7 +66,7 @@ namespace OnlineExam.JWT.Controllers
                 audience: "http://localhost:5000",
                 claims: claims,
                 notBefore: DateTime.Now,
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddHours(100),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
 
             var jwtToken=new JwtSecurityTokenHandler().WriteToken(token);
