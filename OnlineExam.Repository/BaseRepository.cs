@@ -60,7 +60,6 @@ namespace OnlineExam.Repository
         {
             return await base.GetListAsync(func);
         }
-
         public virtual async Task<List<TEntity>> QueryAsync(int page, int size, RefAsync<int> total)
         {
             return await base.Context.Queryable<TEntity>()
@@ -73,5 +72,7 @@ namespace OnlineExam.Repository
                 .Where(func)
                 .ToPageListAsync(page, size, total);
         }
+
+        
     }
 }

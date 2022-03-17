@@ -10,10 +10,12 @@ using OnlineExam.WebApi.Utility._MD5;
 using OnlineExam.WebApi.Utility._Npoi;
 using OnlineExam.WebApi.Utility.ApiResult;
 using OnlineExam.WebApi.ViewModel;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace OnlineExam.WebApi.Controllers
@@ -51,6 +53,72 @@ namespace OnlineExam.WebApi.Controllers
                 return ApiResultHelper.Error("AutoMapper映射错误");
             }
             
+        }
+
+        /// <summary>
+        /// 获取所有学生的分页数据
+        /// </summary>
+        /// <param name="iMapper"></param>
+        /// <param name="page"></param>
+        /// <param name="size"></param>
+        /// <param name="total"></param>
+        /// <returns></returns>
+        [HttpPost("GetPageStudents")]
+        [AllowAnonymous]
+        public async Task<ApiResult> GetPageStudents([FromServices] IMapper iMapper, StuPageViewModel stuPageViewModel)
+        {
+            List<Student> stuList = new List<Student>();
+
+            Expressionable<Student> exp = Expressionable.Create<Student>();
+            exp=exp.And(s => true);
+            if (!string.IsNullOrWhiteSpace(stuPageViewModel.Name))
+            {
+                exp = exp.And(s => s.Name.Contains(stuPageViewModel.Name));
+            }
+
+            if (!string.IsNullOrWhiteSpace(stuPageViewModel.UserName))
+            {
+                exp = exp.And(s => s.Username.Contains(stuPageViewModel.UserName));
+            }
+
+            if (!string.IsNullOrWhiteSpace(stuPageViewModel.State))
+            {
+                int state = int.Parse(stuPageViewModel.State);
+                exp = exp.And(s => s.State == state);
+            }
+
+            if (!string.IsNullOrWhiteSpace(stuPageViewModel.Role))
+            {
+                int role = int.Parse(stuPageViewModel.Role);
+                exp = exp.And(s => s.Role == role);
+            }
+
+            Expression<Func<Student,bool>> expression = exp.ToExpression();
+
+            stuList = await _iStudentService.QueryAsync(expression, stuPageViewModel.Page, stuPageViewModel.Size, stuPageViewModel.Total);
+
+            //if (string.IsNullOrWhiteSpace(stuPageViewModel.Name))
+            //{
+            //    stuList = await _iStudentService.QueryAsync(stuPageViewModel.Page, stuPageViewModel.Size, stuPageViewModel.Total);
+            //}
+            //else
+            //{
+            //    stuList = await _iStudentService.QueryAsync(s=>s.Name.Contains(stuPageViewModel.Name),stuPageViewModel.Page, stuPageViewModel.Size, stuPageViewModel.Total);
+            //}
+
+            
+            if (stuList.Count == 0) return ApiResultHelper.Error("学生信息不存在！");
+
+            try
+            {
+                var students = iMapper.Map<List<StudentDTO>>(stuList);
+                return ApiResultHelper.Success(students, stuPageViewModel.Total);
+            }
+            catch (System.Exception)
+            {
+
+                return ApiResultHelper.Error("AutoMapper映射错误");
+            }
         }
 
         /// <summary>
@@ -98,7 +166,7 @@ namespace OnlineExam.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost("ImportExcelOnFormSubmit")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public async Task<ApiResult> ImportExcelOnFormSubmit(IFormFile file)
         {
             string ext=Path.GetExtension(file.FileName).ToLower();
@@ -160,6 +228,34 @@ namespace OnlineExam.WebApi.Controllers
         }
 
         /// <summary>
+        /// 添加学生(JSON)
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="name"></param>
+        /// <param name="num"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        [HttpPost("CreateForm")]
+        public async Task<ApiResult> CreateForm(StudentFormViewModel studentFormViewModel)
+        {
+            //数据验证
+            Student student = new Student
+            {
+                Username = studentFormViewModel.Username,
+                Password = MD5Helper.MD5Encrypt32(studentFormViewModel.Password),
+                Name = studentFormViewModel.Name,
+                State = studentFormViewModel.State,
+                Num = studentFormViewModel.Num,
+                Role=studentFormViewModel.Role
+            };
+            int newId = await _iStudentService.CreateAsync(student);
+            if (newId <= 0) return ApiResultHelper.Error("添加失败");
+            var newStu = await _iStudentService.FindAsync(newId);
+            return ApiResultHelper.Success(newStu);
+        }
+
+        /// <summary>
         /// 删除学生
         /// </summary>
         /// <param name="id"></param>
@@ -194,6 +290,34 @@ namespace OnlineExam.WebApi.Controllers
             student.Num = num;
             student.Adddate = System.DateTime.Now;
             bool b=await _iStudentService.EditAsync(student);
+            if (!b) return ApiResultHelper.Error("修改失败");
+            return ApiResultHelper.Success(student);
+        }
+
+        /// <summary>
+        /// 编辑学生信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="name"></param>
+        /// <param name="num"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        [HttpPut("EditForm")]
+        public async Task<ApiResult> EditForm(StudentFormViewModel studentFormViewModel)
+        {
+            Console.WriteLine(studentFormViewModel.Role);
+            var student = await _iStudentService.FindAsync(studentFormViewModel.Id);
+            if (student == null) return ApiResultHelper.Error("没有找到该学生");
+            student.Username = studentFormViewModel.Username;
+            student.Password = MD5Helper.MD5Encrypt32(studentFormViewModel.Password);
+            student.Name = studentFormViewModel.Name;
+            student.State = studentFormViewModel.State;
+            student.Num = studentFormViewModel.Num;
+            student.Role = studentFormViewModel.Role;
+            student.Adddate = System.DateTime.Now;
+            bool b = await _iStudentService.EditAsync(student);
             if (!b) return ApiResultHelper.Error("修改失败");
             return ApiResultHelper.Success(student);
         }

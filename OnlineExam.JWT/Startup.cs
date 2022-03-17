@@ -61,6 +61,18 @@ namespace OnlineExam.JWT
                 options.Configuration = _connectionString;
             });
             #endregion
+
+            #region ÅäÖÃ¿çÓò
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsSetup", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,6 +84,9 @@ namespace OnlineExam.JWT
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnlineExam.JWT v1"));
             }
+
+            //Cors¿çÓòÖĞ¼ä¼ş
+            app.UseCors("CorsSetup");
 
             app.UseRouting();
 
