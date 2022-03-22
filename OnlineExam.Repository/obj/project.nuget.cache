@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U8TLRt+ROWFhDJvBu9GLgW6L7bu7k2rS2u1Kim9jP0CEssvJuAo7rk82/hfMRWYRH1Y4v8XAGwzmRT2YDTOwww==",
+  "dgSpecHash": "GbZZnaJBq6YYDlUeukBJs9OnzX0k0rTtTZUsHhSouPMDdi0I4kAXBjKsgbQxtjt1JsBO/MrVwcpbfOdVRR6PfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\lishanbin\\Desktop\\Exam\\OnlineExam\\OnlineExam.Repository\\OnlineExam.Repository.csproj",
   "expectedPackageFiles": [
@@ -142,7 +142,8 @@
     "C:\\Users\\lishanbin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\lishanbin\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\lishanbin\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\lishanbin\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    "C:\\Users\\lishanbin\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
+    "C:\\Users\\lishanbin\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

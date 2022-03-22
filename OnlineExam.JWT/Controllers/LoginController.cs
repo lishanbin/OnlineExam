@@ -63,7 +63,7 @@ namespace OnlineExam.JWT.Controllers
             //issuer代表颁发Token的web应用程序，audience是Token的受理者
             var token = new JwtSecurityToken(
                 issuer: "http://172.16.36.13:6060",
-                audience: "http://localhost:5000",
+                audience: "http://172.16.36.13:5000",
                 claims: claims,
                 notBefore: DateTime.Now,
                 expires: DateTime.Now.AddHours(100),

@@ -112,6 +112,19 @@ namespace OnlineExam.WebApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnlineExam.WebApi v1"));
             }
+            //开启静态页
+            app.UseStaticFiles();
+            //自定义目录
+            string filepath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images");
+            if (!System.IO.Directory.Exists(filepath))
+            {
+                System.IO.Directory.CreateDirectory(filepath);
+            }
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider=new Microsoft.Extensions.FileProviders.PhysicalFileProvider(filepath),
+                RequestPath="/Images"
+            });
 
             //Cors跨域中间件
             app.UseCors("CorsSetup");
@@ -159,7 +172,7 @@ namespace OnlineExam.WebApi
                         ValidateIssuer = true,
                         ValidIssuer = "http://172.16.36.13:6060",
                         ValidateAudience = true,
-                        ValidAudience = "http://localhost:5000",
+                        ValidAudience = "http://172.16.36.13:5000",
                         ValidateLifetime = true,
                         ClockSkew = TimeSpan.FromMinutes(90)
                     };
