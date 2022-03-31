@@ -11,6 +11,9 @@ namespace OnlineExam.WebApi.Utility._AutoMapper
         {
             base.CreateMap<Student, StudentDTO>();
             base.CreateMap<Student, StudentViewModel>();
+            base.CreateMap<Subject, SubjectDTO>();
+            base.CreateMap<Subject,SubjectViewModel>();
+            base.CreateMap<Config, ConfigDTO>();
         }
     }
 }

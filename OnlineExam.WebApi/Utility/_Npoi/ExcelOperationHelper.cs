@@ -23,7 +23,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
     /// 4、Excel转换成byte[]
     /// 5、写入文件流HttpResponse
     /// </summary>
-    public class ExcelOperationHelper
+    public class ExcelOperationHelper<T> where T : class,new()
     {
         /// <summary>
         /// 测试一下如何生成Excel
@@ -64,7 +64,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
         /// </summary>
         /// <param name="dataResources"></param>
         /// <returns></returns>
-        public static IWorkbook DataToHSSFWorkbook(List<ExcelDataResource> dataResources)
+        public static IWorkbook DataToHSSFWorkbook(List<ExcelDataResource<T>> dataResources)
         {
             HSSFWorkbook _Workbook = new HSSFWorkbook();
             if (dataResources==null||dataResources.Count==0)
@@ -136,7 +136,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
         /// </summary>
         /// <param name="dataResources"></param>
         /// <returns></returns>
-        public static MemoryStream ToExcelMemoryStream(List<ExcelDataResource> dataResources)
+        public static MemoryStream ToExcelMemoryStream(List<ExcelDataResource<T>> dataResources)
         {
             IWorkbook _Workbook=DataToHSSFWorkbook(dataResources);
             using (MemoryStream stream=new MemoryStream())
@@ -151,7 +151,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
         /// </summary>
         /// <param name="dataResources"></param>
         /// <returns></returns>
-        public static byte[] ToExcelByteArray(List<ExcelDataResource> dataResources)
+        public static byte[] ToExcelByteArray(List<ExcelDataResource<T>> dataResources)
         {
             IWorkbook _Workbook = DataToHSSFWorkbook(dataResources);
             using (MemoryStream stream=new MemoryStream())
@@ -204,7 +204,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
                 }
 
                 //数据  LastRowNum 最后一行的索引  如第九行  --- 索引 8
-                for (int i = startRow; i < sheet.LastRowNum; i++)
+                for (int i = startRow; i <= sheet.LastRowNum; i++)
                 {
                     IRow row = sheet.GetRow(i); //获取第i行
                     if (row==null)
@@ -231,7 +231,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public static List<Student> ExcelStreamToList(IFormFile file,out string msg)
+        public static List<DataTable> ExcelStreamToList(IFormFile file,out string msg)
         {
             msg = "数据处理成功";
             //获取上传文件后缀
@@ -257,31 +257,38 @@ namespace OnlineExam.WebApi.Utility._Npoi
                 ms.Seek(0, SeekOrigin.Begin);
                 //根据Excel版本进行处理
                 IWorkbook workbook = ext == ".xls" ? (IWorkbook)new HSSFWorkbook(ms) : new XSSFWorkbook(ms);
-                //获取Excel第一张工作表
-                ISheet sheet=workbook.GetSheetAt(0);
-                //获取数据行数
-                int num = sheet.LastRowNum;
-                //待处理用户数据
-                List<Student> students = new List<Student>();
-                for (int i = 1; i <=num; i++)
-                {
-                    //获取指定行数据
-                    IRow row = sheet.GetRow(i);
-                    Student student=new Student();
-                    student.Username = row.GetCell(1).ToString();
-                    student.Password = MD5Helper.MD5Encrypt32("123456");
-                    student.Name = row.GetCell(2).ToString();
-                    student.Num = int.Parse(row.GetCell(3).ToString());
-                    student.State = int.Parse(row.GetCell(4).ToString());
-                    student.Role = int.Parse(row.GetCell(5).ToString());
-                    student.Adddate = DateTime.Now;
-                    students.Add(student);
-                }
-                return students;
+
+                List<DataTable> dtList = ToExcelDataTable(workbook);
+                return dtList;
+
+                ////获取Excel第一张工作表
+                //ISheet sheet=workbook.GetSheetAt(0);
+                ////获取数据行数
+                //int num = sheet.LastRowNum;
+                ////待处理用户数据
+                //List<Student> students = new List<Student>();
+                //for (int i = 1; i <=num; i++)
+                //{
+                //    //获取指定行数据
+                //    IRow row = sheet.GetRow(i);
+                //    Student student=new Student();
+                //    student.Username = row.GetCell(1).ToString();
+                //    student.Password = MD5Helper.MD5Encrypt32("123456");
+                //    student.Name = row.GetCell(2).ToString();
+                //    student.Num = int.Parse(row.GetCell(3).ToString());
+                //    student.State = int.Parse(row.GetCell(4).ToString());
+                //    student.Role = int.Parse(row.GetCell(5).ToString());
+                //    student.Adddate = DateTime.Now;
+                //    students.Add(student);
+                //}
+
+
+                //return students;
             }
             catch (Exception e)
             {
                 msg = "数据处理出错";
+                Console.WriteLine(e);
             }
             return null;
 

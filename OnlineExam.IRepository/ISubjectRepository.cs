@@ -9,5 +9,7 @@ namespace OnlineExam.IRepository
 {
     public interface ISubjectRepository:IBaseRepository<Subject>
     {
+        Task<List<Subject>> QueryTopAsync(int top);
+        Task<List<Subject>> QueryRndTopAsync(int top);
     }
 }

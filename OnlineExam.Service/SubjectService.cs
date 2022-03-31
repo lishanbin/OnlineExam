@@ -18,5 +18,15 @@ namespace OnlineExam.Service
             this._iSubjectRepository = iSubjectRepository;
             base._iBaseRepository = iSubjectRepository;
         }
+
+        public async Task<List<Subject>> QueryRndTopAsync(int top)
+        {
+            return await _iSubjectRepository.QueryRndTopAsync(top);
+        }
+
+        public async Task<List<Subject>> QueryTopAsync(int top)
+        {
+            return await this._iSubjectRepository.QueryTopAsync(top);
+        }
     }
 }

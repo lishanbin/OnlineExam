@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SqlSugar;
 
-namespace OnlineExam.Model
+namespace OnlineExam.Model.DTO
 {
-    public class Config:BaseId
+    public class ConfigDTO
     {
-        [SugarColumn(ColumnDataType ="varchar(200)")]
+        public int Id { get; set; }
         public string Title { get; set; }//考试名称
         public int Num { get; set; }//每题分数
         public int Count { get; set; }//题目数量

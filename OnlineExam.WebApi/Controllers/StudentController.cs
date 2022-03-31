@@ -143,9 +143,9 @@ namespace OnlineExam.WebApi.Controllers
             HttpContext.Response.Headers.Add("Content-Disposition", $"attachment;filename={fileName}.xls");
             
             //获取导出Excel需要的数据源
-            List<ExcelDataResource> dataResources = new List<ExcelDataResource>
+            List<ExcelDataResource<StudentViewModel>> dataResources = new List<ExcelDataResource<StudentViewModel>>
             {
-                new ExcelDataResource()
+                new ExcelDataResource<StudentViewModel>()
                 {
                     SheetName="学生信息表",
                     TitleIndex=1,
@@ -153,7 +153,7 @@ namespace OnlineExam.WebApi.Controllers
                 }
             };
 
-            byte[] bt=ExcelOperationHelper.ToExcelByteArray(dataResources);
+            byte[] bt=ExcelOperationHelper<StudentViewModel>.ToExcelByteArray(dataResources);
 
             //await HttpContext.Response.BodyWriter.WriteAsync(bt);
 
@@ -166,14 +166,33 @@ namespace OnlineExam.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost("ImportExcelOnFormSubmit")]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public async Task<ApiResult> ImportExcelOnFormSubmit(IFormFile file)
         {
             string ext=Path.GetExtension(file.FileName).ToLower();
             Console.WriteLine(ext);
             //获取上传的Excel文件
             string msg = "";
-            List<Student> students = ExcelOperationHelper.ExcelStreamToList(file, out msg);
+
+            List<Student> students = new List<Student>();
+            List<DataTable> dtList = ExcelOperationHelper<Student>.ExcelStreamToList(file, out msg);
+
+            DataTable dtStudent = dtList[0];
+            for (int i = 0; i < dtStudent.Rows.Count; i++)
+            {
+                //    //获取指定行数据
+                DataRow row = dtStudent.Rows[i];
+                Student student = new Student();
+                student.Username = row[1].ToString();
+                student.Password = MD5Helper.MD5Encrypt32("123456");
+                student.Name = row[2].ToString();
+                student.Num = int.Parse(row[3].ToString());
+                student.State = int.Parse(row[4].ToString());
+                student.Role = int.Parse(row[5].ToString());
+                student.Adddate = DateTime.Now;
+                students.Add(student);
+            }
+
             if (students == null) return ApiResultHelper.Error(msg);
 
             foreach (var student in students)
@@ -311,7 +330,7 @@ namespace OnlineExam.WebApi.Controllers
             var student = await _iStudentService.FindAsync(studentFormViewModel.Id);
             if (student == null) return ApiResultHelper.Error("没有找到该学生");
             student.Username = studentFormViewModel.Username;
-            student.Password = MD5Helper.MD5Encrypt32(studentFormViewModel.Password);
+            student.Password =String.IsNullOrWhiteSpace(studentFormViewModel.Password)? student.Password: MD5Helper.MD5Encrypt32(studentFormViewModel.Password);
             student.Name = studentFormViewModel.Name;
             student.State = studentFormViewModel.State;
             student.Num = studentFormViewModel.Num;
@@ -328,7 +347,7 @@ namespace OnlineExam.WebApi.Controllers
         {
             try
             {
-                IWorkbook workBook=ExcelOperationHelper.CreateExcelWorkbook();
+                IWorkbook workBook=ExcelOperationHelper<Student>.CreateExcelWorkbook();
                 using (FileStream file=new FileStream("C:\\Users\\lishanbin\\Desktop\\Exam\\text.xls",FileMode.Create))
                 {
                     workBook.Write(file);

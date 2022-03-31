@@ -9,5 +9,7 @@ namespace OnlineExam.IService
 {
     public interface ISubjectService:IBaseService<Subject>
     {
+        Task<List<Subject>> QueryTopAsync(int top);
+        Task<List<Subject>> QueryRndTopAsync(int top);
     }
 }

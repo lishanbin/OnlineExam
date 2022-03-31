@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OnlineExam.WebApi.Utility._Npoi
 {
-    public class ExcelDataResource
+    public class ExcelDataResource<T> where T : class,new()
     {
         /// <summary>
         /// 保存到表的名称（sheet ?）
@@ -16,7 +16,7 @@ namespace OnlineExam.WebApi.Utility._Npoi
         /// <summary>
         /// 每一个Sheet的数据
         /// </summary>
-        public List<StudentViewModel> SheetDataResource { get; set; }
+        public List<T> SheetDataResource { get; set; }
     }
 
     public class UserInfo
